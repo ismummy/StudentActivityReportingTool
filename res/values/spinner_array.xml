@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="reporting_unit">
+        <item >Student Branch</item>
+        <item >Sections</item>
+        <item >Student Chapters</item>
+        <item >Affinity Groups</item>
+        <item >Society</item>
+        <item >Region</item>
+        <item >Others</item>
+    </string-array>
+    <string-array name="event_type">
+        <item >Conference</item>
+        <item >Seminar</item>
+        <item >Webinar</item>
+        <item >Workshop</item>
+        <item >Competition</item>
+        <item >Industry Visit</item>
+        <item >General Meeting</item>
+        <item >Technical Classes</item>
+        <item >Affinity Group Meeting</item>
+        <item >Others</item>
+    </string-array>
+    
+</resources>

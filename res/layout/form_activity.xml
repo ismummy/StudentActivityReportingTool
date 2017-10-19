@@ -1,0 +1,296 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:weightSum="100"
+    tools:context="com.ieeelautechsb.studentactivityreportingtool.FormPage" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_weight="15" >
+
+        <!-- form dialog -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:orientation="vertical"
+            android:paddingTop="10dp" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Activity Report Catalog"
+                android:textColor="@color/blue"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/reporting_officer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Reporting Officer Name"
+                android:textColor="@color/white" />
+
+            <EditText
+                android:id="@+id/officer_position"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Officer Position"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Select Reporting Unit"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/reporting_uit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/reporting_unit"
+                android:prompt="@string/reporting_unit" />
+
+            <LinearLayout
+                android:id="@+id/sb_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:visibility="gone" >
+
+                <EditText
+                    android:id="@+id/spo_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="SPO ID"
+                    android:textColor="@color/white" />
+
+                <EditText
+                    android:id="@+id/registration_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Registration Number"
+                    android:textColor="@color/white" />
+
+                <EditText
+                    android:id="@+id/sb_chairman_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="SB Chairman Name"
+                    android:textColor="@color/white" />
+
+                <EditText
+                    android:id="@+id/sb_chairman_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="SB Chairman Phone"
+                    android:inputType="phone"
+                    android:textColor="@color/white" />
+
+                <EditText
+                    android:id="@+id/sb_chairman_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="SB Chairman Email"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/white" />
+
+                <EditText
+                    android:id="@+id/sb_advisor_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="SB Advisor Phone"
+                    android:inputType="phone"
+                    android:textColor="@color/white" />
+
+                <EditText
+                    android:id="@+id/sb_advisor_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="SB Advisor Email"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/event_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Event Title"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Select Event Type"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/event_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/event_type"
+                android:prompt="@string/event_type" />
+
+            <EditText
+                android:id="@+id/event_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:height="75dp"
+                android:hint="Event Description and Aims (max 300 characters)"
+                android:inputType="textMultiLine"
+                android:textColor="@color/white" />
+
+            <EditText
+                android:id="@+id/event_expense"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:height="75dp"
+                android:hint="Expense Details"
+                android:inputType="textMultiLine"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Do You need MGA Materials?"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/mga"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="YES"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="NO"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/event_venue"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:height="75dp"
+                android:hint="Event venue"
+                android:inputType="textMultiLine"
+                android:textColor="@color/white" />
+
+            <EditText
+                android:id="@+id/event_country"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Event Country"
+                android:textColor="@color/white" />
+
+            <EditText
+                android:id="@+id/event_section"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Section"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Event Date"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <DatePicker
+                android:id="@+id/event_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:calendarViewShown="false"
+                android:endYear="2050"
+                android:startYear="2014" />
+
+            <EditText
+                android:id="@+id/event_volunteer_phone"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Volunteer Phone Number(s)"
+                android:inputType="phone"
+                android:textColor="@color/white" />
+
+            <EditText
+                android:id="@+id/event_volunteer_email"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Volunteer Email Address(s)"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </ScrollView>
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_weight="85"
+        android:columnCount="2"
+        android:rowCount="1" >
+
+        <!-- form buttons -->
+
+        <ImageButton
+            android:id="@+id/reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/reset" />
+
+        <ImageButton
+            android:id="@+id/send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/send" />
+    </GridLayout>
+
+</LinearLayout>
